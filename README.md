@@ -27,6 +27,12 @@ This is the template for the **fourth visibility pattern** in RAPP:
 | `workspace_invite_agent.py` | Compose the exact `gh api` command to add a new collaborator. |
 | `workspace_inbox_agent.py` | Surface async work products from federated agents — attributed to whichever operator's rappid did the work. |
 
+## Estate management skill
+
+`.github/skills/autonomous-rapp-estate-manager/SKILL.md` is the portable,
+single-file workflow for placing this independent workspace inside a private,
+pointer-only local estate without moving or copying it.
+
 ## How federation flows back here
 
 The workspace inbox is the operator-side aggregator described in the master plan ("the user is in the loop async"). When agents in OTHER neighborhoods (or this one's automated runs) finish work for a member, the result lands in `state/inbox/<utc>-<from-rappid>.json`. The `workspace_inbox_agent` surfaces those to the operator on next chat.
